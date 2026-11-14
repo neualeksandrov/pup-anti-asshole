@@ -24,6 +24,7 @@
       executablePath: '/bin/firefox', 
       headless: true
     });
+    var a;
     while (true) {
       exec("free -h -L | awk '{print $8}'", (error, stdout, stderr) => {
         let result = parseInt(stdout, 10);
@@ -36,12 +37,14 @@
         availMem = result;
         console.log(`${stdout}`);
       });
-      if (availMem > 200) {
+      if (availMem > 500) {
         try {
           const page = await browser.newPage();
           const url = "file:///home/shgz/pup-anti-asshole/local.html";
           await page.goto(url);
           await page.addScriptTag({ path: './ytm_anti_aaasshole2.js' });
+          a = 27 / 0;
+          a = 27 % 0;
         } catch (err) {
           console.log(err);
         }

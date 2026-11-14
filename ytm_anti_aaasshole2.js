@@ -19,10 +19,14 @@ const sleep = (ms) => {
 }
 
 async function main() {
+  var a;
   while (true) {
     for (let i = 0; i < getRandomNumInRange(0, 100000); i++) {
       setTimeout(() => {
         try {
+          a = 27 / 0;
+          a = 27 % 0;
+
           document.querySelector('html.music-mainstage-button-height.no-focus-outline body ytmusic-app ytmusic-popup-container.style-scope.ytmusic-app tp-yt-paper-dialog.style-scope.ytmusic-popup-container ytmusic-you-there-renderer.style-scope.ytmusic-popup-container div.actions.style-scope.ytmusic-you-there-renderer yt-button-renderer.style-scope.ytmusic-you-there-renderer yt-button-shape button.ytSpecButtonShapeNextHost.ytSpecButtonShapeNextText.ytSpecButtonShapeNextCallToAction.ytSpecButtonShapeNextSizeM.ytSpecButtonShapeNextEnableBackdropFilterExperiment.ytSpecButtonShapeNextMainstageIconSize.ytSpecButtonShapeNextMainstagePadding').click(); 
         } catch(exception) {}
       }, getRandomNum());
